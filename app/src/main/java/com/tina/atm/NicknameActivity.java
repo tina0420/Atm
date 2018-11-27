@@ -14,15 +14,15 @@ public class NicknameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_nickname);
     }
 
-    public void nickname(View view){
+    public void next(View view){
         EditText edNickname = findViewById(R.id.ed_nickname);
         String nickname = edNickname.getText().toString();
         getSharedPreferences("NICKNAME",MODE_PRIVATE)
                 .edit()
                 .putString("NickName",nickname)
                 .apply();
-        Intent next = new Intent(this,AgeActivity.class);
-        startActivity(next);
+        Intent age = new Intent(this,AgeActivity.class);
+        startActivity(age);
     }
 
 }
