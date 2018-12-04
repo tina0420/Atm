@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void listView() {
-        List<String> fruits = Arrays.asList("香蕉","鳳梨","芭樂");
+        List<String> fruits = Arrays.asList("香蕉","蘋果","芭樂");
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,fruits);
         ListView listView = findViewById(R.id.list);
         listView.setAdapter(adapter);
