@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Atm</string>
+    <item>#FF0000</item>
+    <item>#FF8C00</item>
+    <item>#FFFF00</item>
+    <item>#32CD32</item>
+    <item>#00BFFF</item>
+    <item>#4682B4</item>
+    <item>#9932CC</item>
 </resources>

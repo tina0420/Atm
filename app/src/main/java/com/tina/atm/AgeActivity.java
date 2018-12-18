@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,7 @@ import android.widget.TextView;
 
 public class AgeActivity extends AppCompatActivity {
 
-    int[] numbers = {19,20,21,22,23,24,25};
+    int[] numbers = {18,19,20,21,22,23,24};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,14 +52,17 @@ public class AgeActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onBindViewHolder(@NonNull AgeViewHolder holder, int position) {
-            holder.ageView.setText(numbers[position]+"");
-            if(numbers[position] == 19){
-                holder.ageView.setTextColor(Color.BLUE);
-            }
+        public void onBindViewHolder(@NonNull AgeViewHolder holder, final int position) {
+            holder.ageView.setText(numbers[position] + "");
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("AgeActivity", "onClick" + numbers[position]);
+                }
+            });
+
+
         }
-
-
 
         @Override
         public int getItemCount() {

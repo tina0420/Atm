@@ -1,5 +1,6 @@
 package com.tina.atm;
 
+import android.content.ContentValues;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,8 @@ public class LoginActivity extends AppCompatActivity {
         String userid = getSharedPreferences("atm",MODE_PRIVATE)
                 .getString("USERID","");
         edUserid.setText(userid);
+        My_dbHelper helper = new My_dbHelper(this,"expense.db",null,1);
+        ContentValues values = new ContentValues();
     }
     public void login(View view){
         String userid = ((EditText)findViewById(R.id.ed_userid)).getText().toString();
